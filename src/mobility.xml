@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<movement>
+	<param name="displayString" value="trail=green,1000"/>
+    <!-- Start position -->
+    <set speed="50" angle="0" x="700" y="130"/>
+    
+    <!-- Move left to top polling point -->
+    <moveto x="130" y="130" t="1"/>
+    
+    <!-- Wait for cloud response -->
+    <wait t="7"/>
+    
+    <!--
+    Move down to bottom polling point
+    This is the vertical movement section
+    -->
+    <moveto x="130" y="410" t="1"/>
+    
+    <moveto x="190" y="410"/>
+    
+    <!-- Wait for cloud response -->
+    <wait t="9"/>
+    
+    <!-- Final movement to end position -->
+    <moveto x="700" y="410" t="1"/>
+
+    <wait t="0"/>
+</movement>

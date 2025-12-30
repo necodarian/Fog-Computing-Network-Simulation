@@ -1,0 +1,955 @@
+version 3
+run GarbageInTheCansAndSlow-0-20251107-19:46:37-659
+attr configname GarbageInTheCansAndSlow
+attr datetime 20251107-19:46:37
+attr datetimef 20251107-194637
+attr experiment GarbageInTheCansAndSlow
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network in5700groupprojectclean.GarbageCollectionSystem
+attr processid 659
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet/images
+config *.mode "\"cloud\""
+config *.fastDelay 35ms
+config *.fastRate 150Mbps
+config *.slowDelay 300ms
+config *.slowRate 5Mbps
+config network in5700groupprojectclean.GarbageCollectionSystem
+config ned-path .:../simulations:../../inet/src
+config **.gsize 3
+config **.host.mobilityType "\"inet.mobility.single.TurtleMobility\""
+config **.host.mobility.turtleScript "xmldoc(\"mobility.xml\")"
+config **.host.mobility.updateInterval 0.1s
+config **.host.mobility.constraintAreaMinX 0m
+config **.host.mobility.constraintAreaMinY 0m
+config **.host.mobility.constraintAreaMinZ 0m
+config **.host.mobility.constraintAreaMaxX 800m
+config **.host.mobility.constraintAreaMaxY 520m
+config **.host.mobility.constraintAreaMaxZ 0m
+config **.host.mobility.initFromDisplayString false
+config **.host.mobility.initialX 680m
+config **.host.mobility.initialY 340m
+config **.host.mobility.initialZ 0m
+config *.visualizer.mobilityVisualizer.displayMovementTrails true
+config *.visualizer.physicalEnvironmentVisualizer.displayObjects true
+config *.visualizer.mobilityVisualizer.trailLength 1000
+config *.visualizer.mobilityVisualizer.movementTrailLineColor "\"green\""
+config *.visualizer.mediumVisualizer.displayCommunicationRanges true
+config *.visualizer.mobilityVisualizer.animationSpeed 1
+config *.visualizer.mobilityVisualizer.displayVelocities true
+config *.visualizer.mobilityVisualizer.velocityArrowScale 0.18
+
+par GarbageCollectionSystem.host.out[0].channel typename "\"in5700groupprojectclean.FastLink\""
+par GarbageCollectionSystem.host.out[0].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.host.out[0].channel delay 0.035s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.host.out[0].channel datarate 1.5e+08bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.host.out[0].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.host.out[0].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.can.out[0].channel typename "\"in5700groupprojectclean.FastLink\""
+par GarbageCollectionSystem.can.out[0].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.can.out[0].channel delay 0.035s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.can.out[0].channel datarate 1.5e+08bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.can.out[0].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.can.out[0].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.host.out[1].channel typename "\"in5700groupprojectclean.FastLink\""
+par GarbageCollectionSystem.host.out[1].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.host.out[1].channel delay 0.035s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.host.out[1].channel datarate 1.5e+08bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.host.out[1].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.host.out[1].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.anotherCan.out[0].channel typename "\"in5700groupprojectclean.FastLink\""
+par GarbageCollectionSystem.anotherCan.out[0].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.anotherCan.out[0].channel delay 0.035s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.anotherCan.out[0].channel datarate 1.5e+08bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.anotherCan.out[0].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.anotherCan.out[0].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.host.out[2].channel typename "\"in5700groupprojectclean.SlowLink\""
+par GarbageCollectionSystem.host.out[2].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.host.out[2].channel delay 0.3s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.host.out[2].channel datarate 5e+06bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.host.out[2].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.host.out[2].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.cloud.out[0].channel typename "\"in5700groupprojectclean.SlowLink\""
+par GarbageCollectionSystem.cloud.out[0].channel disabled false
+attr mutable ""
+par GarbageCollectionSystem.cloud.out[0].channel delay 0.3s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.cloud.out[0].channel datarate 5e+06bps
+attr mutable ""
+attr unit bps
+par GarbageCollectionSystem.cloud.out[0].channel ber 0
+attr mutable ""
+par GarbageCollectionSystem.cloud.out[0].channel per 0
+attr mutable ""
+par GarbageCollectionSystem.can typename "\"in5700groupprojectclean.GarbageCan\""
+par GarbageCollectionSystem.anotherCan typename "\"in5700groupprojectclean.GarbageCan\""
+par GarbageCollectionSystem.host.app typename "\"in5700groupprojectclean.Smartphone\""
+par GarbageCollectionSystem.host.mobility typename "\"inet.mobility.single.TurtleMobility\""
+par GarbageCollectionSystem.host.mobility displayStringTextFormat "\"p: %p\\nv: %v\""
+attr mutable ""
+par GarbageCollectionSystem.host.mobility subjectModule "\"^\""
+par GarbageCollectionSystem.host.mobility coordinateSystemModule "\"\""
+par GarbageCollectionSystem.host.mobility updateDisplayString true
+par GarbageCollectionSystem.host.mobility constraintAreaMinX 0m
+attr unit m
+par GarbageCollectionSystem.host.mobility constraintAreaMinY 0m
+attr unit m
+par GarbageCollectionSystem.host.mobility constraintAreaMinZ 0m
+attr unit m
+par GarbageCollectionSystem.host.mobility constraintAreaMaxX 800m
+attr unit m
+par GarbageCollectionSystem.host.mobility constraintAreaMaxY 520m
+attr unit m
+par GarbageCollectionSystem.host.mobility constraintAreaMaxZ 0m
+attr unit m
+par GarbageCollectionSystem.host.mobility updateInterval 0.1s
+attr unit s
+par GarbageCollectionSystem.host.mobility faceForward true
+par GarbageCollectionSystem.host.mobility turtleScript "<movement>...</movement> at /home/opp_env/default_workspace/in5700GroupProjectClean/src//mobility.xml:2"
+par GarbageCollectionSystem.host typename "\"in5700groupprojectclean.SmartphoneWithMobility\""
+par GarbageCollectionSystem.host mobilityType "\"inet.mobility.single.TurtleMobility\""
+par GarbageCollectionSystem.host mode "\"cloud\""
+par GarbageCollectionSystem.cloud typename "\"in5700groupprojectclean.Cloud\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer typename "\"inet.visualizer.canvas.scene.SceneCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.sceneVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer physicalEnvironmentModule "\"physicalEnvironment\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.sceneVisualizer axisLength "nan m"
+attr mutable ""
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer animationSpeed 0
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMinX "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMinY "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMinZ "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMaxX "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMaxY "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer sceneMaxZ "nan m"
+attr unit m
+par GarbageCollectionSystem.visualizer.sceneVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.sceneVisualizer viewAngle "\"x right y down z out\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.sceneVisualizer viewScale "\"1 1\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.sceneVisualizer viewTranslation "\"0 0\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.sceneVisualizer descriptionFigure "\"\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer typename "\"inet.visualizer.canvas.environment.PhysicalEnvironmentCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer physicalEnvironmentModule "\"physicalEnvironment\""
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer displayObjects true
+par GarbageCollectionSystem.visualizer.physicalEnvironmentVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer typename "\"inet.visualizer.canvas.scene.NetworkNodeCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer annotationSpacing 4
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer placementPenalty 10
+par GarbageCollectionSystem.visualizer.networkNodeVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer typename "\"inet.visualizer.canvas.scene.NetworkConnectionCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer displayNetworkConnections true
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer nodeFilter "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer lineColor "\"black\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer lineWidth 1
+par GarbageCollectionSystem.visualizer.networkConnectionVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.mobilityVisualizer typename "\"inet.visualizer.canvas.mobility.MobilityCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayMobility true
+par GarbageCollectionSystem.visualizer.mobilityVisualizer animationSpeed 1
+par GarbageCollectionSystem.visualizer.mobilityVisualizer moduleFilter "\"**.mobility\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayPositions false
+par GarbageCollectionSystem.visualizer.mobilityVisualizer positionCircleRadius 4
+par GarbageCollectionSystem.visualizer.mobilityVisualizer positionCircleLineWidth 1
+par GarbageCollectionSystem.visualizer.mobilityVisualizer positionCircleLineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer positionCircleFillColor "\"dark\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayOrientations false
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationPieRadius 32
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationPieSize 0.2
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationPieOpacity 0.25
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationLineColor "\"black\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationLineWidth 1
+par GarbageCollectionSystem.visualizer.mobilityVisualizer orientationFillColor "\"blue\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayVelocities true
+par GarbageCollectionSystem.visualizer.mobilityVisualizer velocityArrowScale 0.18
+par GarbageCollectionSystem.visualizer.mobilityVisualizer velocityLineColor "\"black\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer velocityLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer velocityLineWidth 1
+par GarbageCollectionSystem.visualizer.mobilityVisualizer displayMovementTrails true
+par GarbageCollectionSystem.visualizer.mobilityVisualizer movementTrailLineColor "\"green\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer movementTrailLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.mobilityVisualizer movementTrailLineWidth 1
+par GarbageCollectionSystem.visualizer.mobilityVisualizer trailLength 1000
+par GarbageCollectionSystem.visualizer.mobilityVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.statisticVisualizer typename "\"inet.visualizer.canvas.common.StatisticCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.statisticVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer displayStatistics false
+par GarbageCollectionSystem.visualizer.statisticVisualizer signalName "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer statisticName "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer statisticUnit "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer statisticExpression "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer sourceFilter "\"**\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.statisticVisualizer format "\"%n: %v %u\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.statisticVisualizer unit "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer font "\"<default>\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer textColor "\"black\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer backgroundColor "\"white\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer opacity 1
+par GarbageCollectionSystem.visualizer.statisticVisualizer placementHint "\"top\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.statisticVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.statisticVisualizer propertyName "\"\""
+par GarbageCollectionSystem.visualizer.statisticVisualizer propertyIndex "\"\""
+par GarbageCollectionSystem.visualizer.infoVisualizer typename "\"inet.visualizer.canvas.common.InfoCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.infoVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.infoVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.infoVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.infoVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.infoVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.infoVisualizer displayInfos true
+par GarbageCollectionSystem.visualizer.infoVisualizer modules "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.infoVisualizer format "\"%t\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.infoVisualizer font "\"<default>\""
+par GarbageCollectionSystem.visualizer.infoVisualizer textColor "\"black\""
+par GarbageCollectionSystem.visualizer.infoVisualizer textAlignment "\"left\""
+attr enum left,right,center
+par GarbageCollectionSystem.visualizer.infoVisualizer backgroundColor "\"white\""
+par GarbageCollectionSystem.visualizer.infoVisualizer lineColor "\"black\""
+par GarbageCollectionSystem.visualizer.infoVisualizer opacity 1
+par GarbageCollectionSystem.visualizer.infoVisualizer placementHint "\"top\""
+par GarbageCollectionSystem.visualizer.infoVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.infoVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer typename "\"inet.visualizer.canvas.power.EnergyStorageCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer displayEnergyStorages false
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer energyStorageFilter "\"**\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer color "\"green\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer width 8
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer height 24
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer spacing 2
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer placementHint "\"right\""
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.energyStorageVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.mediumVisualizer typename "\"inet.visualizer.canvas.physicallayer.MediumCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer mediumModule "\"radioMedium\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer displaySignals false
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalColor "\"dark\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalPropagationAnimationSpeed "nan "
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalPropagationAnimationTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalPropagationAdditionalTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalTransmissionAnimationSpeed "nan "
+attr mutable ""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalTransmissionAnimationTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalAnimationSpeedChangeTimeMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalAnimationSpeedChangeTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer displaySignalDepartures false
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalDepartureImage "\"misc/signal_departure.png\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalDeparturePlacementHint "\"topCenter\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalDeparturePlacementPriority 1
+par GarbageCollectionSystem.visualizer.mediumVisualizer displaySignalArrivals false
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalArrivalImage "\"misc/signal_arrival.png\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalArrivalPlacementHint "\"topCenter\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalArrivalPlacementPriority -1
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayCommunicationRanges true
+par GarbageCollectionSystem.visualizer.mediumVisualizer communicationRangeLineColor "\"blue\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer communicationRangeLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer communicationRangeLineWidth 1
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayInterferenceRanges false
+par GarbageCollectionSystem.visualizer.mediumVisualizer interferenceRangeLineColor "\"gray\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer interferenceRangeLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer interferenceRangeLineWidth 1
+par GarbageCollectionSystem.visualizer.mediumVisualizer autoPowerAxis true
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMinPower "inf dBmW"
+attr unit dBmW
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMaxPower 0dBmW
+attr unit dBmW
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMinPowerDensity "inf dBmWpMHz"
+attr unit dBmWpMHz
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMaxPowerDensity "-inf dBmWpMHz"
+attr unit dBmWpMHz
+par GarbageCollectionSystem.visualizer.mediumVisualizer autoTimeAxis true
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMinTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMaxTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.mediumVisualizer autoFrequencyAxis true
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMinFrequency "inf Hz"
+attr unit Hz
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalMaxFrequency "-inf Hz"
+attr unit Hz
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayMainPowerDensityMap false
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapPixmapDensity 1
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapMinX 0
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapMaxX "nan "
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapMinY 0
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapMaxY "nan "
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapZ 0
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapFigureXTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer mainPowerDensityMapFigureYTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayPowerDensityMaps false
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapMode "\"auto\""
+attr enum total,signal,auto
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapPixelMode "\"mean\""
+attr enum sample,partition,mean
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapApproximationSize 10
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapCenterFrequency "nan Hz"
+attr mutable ""
+attr unit Hz
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapBandwidth 0Hz
+attr mutable ""
+attr unit Hz
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapFigureWidth 200
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapFigureHeight 120
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapPixmapWidth 200
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapPixmapHeight 120
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapZ 0
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapFigureXTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer powerDensityMapFigureYTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer displaySpectrums false
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumMode "\"auto\""
+attr enum total,signal,auto
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumFigureWidth 200
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumFigureHeight 120
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumFigureXTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumFigureYTickCount 5
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumFigureInterpolationSize 5
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumPlacementHint "\"bottomCenter\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrumPlacementPriority -1
+par GarbageCollectionSystem.visualizer.mediumVisualizer displaySpectrograms false
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramMode "\"auto\""
+attr enum total,signal,auto
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramPixelMode "\"mean\""
+attr enum sample,partition,mean
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramFigureWidth 200
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramFigureHeight 120
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramPixmapWidth 200
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramPixmapHeight 120
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramFigureXTickCount 3
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramFigureYTickCount 5
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramPlacementHint "\"bottomCenter\""
+par GarbageCollectionSystem.visualizer.mediumVisualizer spectrogramPlacementPriority -1
+par GarbageCollectionSystem.visualizer.mediumVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalShape "\"ring\""
+attr enum ring,sphere
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalOpacity 0.5
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalRingCount 20
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalRingSize 50m
+attr unit m
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalFadingDistance 50m
+attr unit m
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalFadingFactor 1.2
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalWaveCount 20
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalWaveLength 50m
+attr unit m
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalWaveWidth 10m
+attr unit m
+par GarbageCollectionSystem.visualizer.mediumVisualizer signalWaveFadingAnimationSpeedFactor 1
+par GarbageCollectionSystem.visualizer.mediumVisualizer displayCommunicationHeat false
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer typename "\"inet.visualizer.canvas.physicallayer.TracingObstacleLossCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer displayIntersections false
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer intersectionLineColor "\"red\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer intersectionLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer intersectionLineWidth 1
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer displayFaceNormalVectors false
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer faceNormalLineColor "\"grey\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer faceNormalLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer faceNormalLineWidth 1
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.obstacleLossVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.packetDropVisualizer typename "\"inet.visualizer.canvas.common.PacketDropCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer displayPacketDrops false
+par GarbageCollectionSystem.visualizer.packetDropVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer detailsFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer icon "\"msg/packet_s\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer iconTintAmount 1
+par GarbageCollectionSystem.visualizer.packetDropVisualizer iconTintColor "\"dark\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer labelFormat "\"%n\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer labelFont "\"<default>\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer labelColor "\"black\""
+par GarbageCollectionSystem.visualizer.packetDropVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.packetDropVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.packetDropVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.packetDropVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.packetDropVisualizer dx 32
+par GarbageCollectionSystem.visualizer.packetDropVisualizer dy 64
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer typename "\"inet.visualizer.canvas.flow.PacketFlowCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer displayRoutes false
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer startPathSignal "\"packetFlowStarted\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer endPathSignal "\"packetFlowEnded\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineStyle "\"dashed\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineSmooth false
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer labelFormat "\"%L %p pk (%l)\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer labelColor "\"\""
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer fadeOutTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.packetFlowVisualizer zIndex 4
+par GarbageCollectionSystem.visualizer.queueVisualizer typename "\"inet.visualizer.canvas.common.QueueCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.queueVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.queueVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.queueVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.queueVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.queueVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.queueVisualizer displayQueues false
+par GarbageCollectionSystem.visualizer.queueVisualizer queueFilter "\"**\""
+par GarbageCollectionSystem.visualizer.queueVisualizer color "\"blue\""
+par GarbageCollectionSystem.visualizer.queueVisualizer width 8
+par GarbageCollectionSystem.visualizer.queueVisualizer height 24
+par GarbageCollectionSystem.visualizer.queueVisualizer spacing 2
+par GarbageCollectionSystem.visualizer.queueVisualizer placementHint "\"right\""
+par GarbageCollectionSystem.visualizer.queueVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.queueVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer typename "\"inet.visualizer.canvas.common.GateScheduleCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer displayGateSchedules false
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer labelFormat "\"%i %D\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer gateFilter "\"**\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer width 100
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer height 8
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer spacing 2
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer placementHint "\"right\""
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer displayDuration 0s
+attr mutable ""
+attr unit s
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer currentTimePosition 50
+par GarbageCollectionSystem.visualizer.gateScheduleVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.radioVisualizer typename "\"inet.visualizer.canvas.physicallayer.RadioCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.radioVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.radioVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.radioVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.radioVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.radioVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.radioVisualizer displayRadios false
+par GarbageCollectionSystem.visualizer.radioVisualizer displayRadioMode true
+par GarbageCollectionSystem.visualizer.radioVisualizer displayReceptionState true
+par GarbageCollectionSystem.visualizer.radioVisualizer displayTransmissionState true
+par GarbageCollectionSystem.visualizer.radioVisualizer displayAntennaLobes false
+par GarbageCollectionSystem.visualizer.radioVisualizer radioFilter "\"**\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.radioVisualizer radioModeImages "\"block/process_vs block/timer_vs block/wrx_vs block/wtx_vs block/wrxtx_vs block/cogwheel_vs\""
+par GarbageCollectionSystem.visualizer.radioVisualizer receptionStateImages "\"- - misc/receiving misc/receiving\""
+par GarbageCollectionSystem.visualizer.radioVisualizer transmissionStateImages "\"- - misc/transmitting\""
+par GarbageCollectionSystem.visualizer.radioVisualizer width 16
+par GarbageCollectionSystem.visualizer.radioVisualizer height 16
+par GarbageCollectionSystem.visualizer.radioVisualizer placementHint "\"bottomRight\""
+par GarbageCollectionSystem.visualizer.radioVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeNormalize false
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeRelativeLabels false
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobePlaneGlobal true
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobePlane "\"view\""
+attr enum view,xy,xz,yz
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeMode "\"logarithmic\""
+attr enum logarithmic,linear
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLogarithmicBase 10
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLogarithmicScale 100
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeRadius 100
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeStep 10deg
+attr unit deg
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeOpacity 0.25
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLineSmooth true
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLineColor "\"black\""
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeLineWidth 1
+par GarbageCollectionSystem.visualizer.radioVisualizer antennaLobeFillColor "\"white\""
+par GarbageCollectionSystem.visualizer.radioVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer typename "\"inet.visualizer.canvas.physicallayer.PhysicalLinkCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer displayLinks false
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer activityLevel "\"service\""
+attr enum service,peer,protocol
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineColor "\"olive\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineStyle "\"dotted\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer labelFormat "\"%n\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer labelColor "\"olive\""
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer holdAnimationTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.physicalLinkVisualizer zIndex 1
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer typename "\"inet.visualizer.canvas.linklayer.InterfaceTableCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer displayInterfaceTables false
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer displayWiredInterfacesAtConnections true
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer displayBackground false
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer interfaceFilter "\"not(lo*)\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer format "\"%N %\\\\%a%/%l\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer placementHint "\"top\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer font "\"<default>\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer textColor "\"#005030\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer backgroundColor "\"white\""
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer opacity 1
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer zIndex 10
+par GarbageCollectionSystem.visualizer.interfaceTableVisualizer anchor "\"l\""
+attr enum l,r,t
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer typename "\"inet.visualizer.canvas.linklayer.DataLinkCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer displayLinks false
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer activityLevel "\"service\""
+attr enum service,peer,protocol
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineColor "\"darkcyan\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer labelFormat "\"%n\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer labelColor "\"darkcyan\""
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer holdAnimationTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.dataLinkVisualizer zIndex 2
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer typename "\"inet.visualizer.canvas.linklayer.LinkBreakCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer displayLinkBreaks false
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer icon "\"status/stop\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer iconTintAmount 0
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer iconTintColor "\"\""
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.linkBreakVisualizer zIndex 2
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer typename "\"inet.visualizer.canvas.linklayer.Ieee80211CanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer displayAssociations false
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer interfaceFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer minPower -85dBm
+attr unit dBm
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer maxPower -50dBm
+attr unit dBm
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer icons "\"misc/signal_power_0 misc/signal_power_1 misc/signal_power_2 misc/signal_power_3\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer iconColor "\"dark\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer labelFont "\"<default>\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer labelColor "\"black\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer placementHint "\"top\""
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.ieee80211Visualizer zIndex 2
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer typename "\"inet.visualizer.canvas.networklayer.NetworkRouteCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer displayRoutes false
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer startPathSignal "\"packetReceivedFromUpper\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer endPathSignal "\"packetSentToUpper\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineSmooth false
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer labelFormat "\"%n\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer labelColor "\"\""
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.networkRouteVisualizer zIndex 3
+par GarbageCollectionSystem.visualizer.routingTableVisualizer typename "\"inet.visualizer.canvas.networklayer.RoutingTableCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer displayRoutingTables false
+par GarbageCollectionSystem.visualizer.routingTableVisualizer displayRoutesIndividually true
+par GarbageCollectionSystem.visualizer.routingTableVisualizer displayLabels true
+par GarbageCollectionSystem.visualizer.routingTableVisualizer destinationFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer multicastSourceNodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer multicastSourceAddressFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer multicastGroupFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineColor "\"black\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineWidth 2
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.routingTableVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.routingTableVisualizer labelFormat "\"%d/%m -> %g (%n)\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer labelColor "\"black\""
+par GarbageCollectionSystem.visualizer.routingTableVisualizer zIndex 0
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer typename "\"inet.visualizer.canvas.transportlayer.TransportRouteCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer displayRoutes false
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer startPathSignal "\"packetReceivedFromUpper\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer extendPathSignal "\"packetReceivedFromLower\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer endPathSignal "\"packetSentToUpper\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineSmooth false
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer labelFormat "\"%n\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer labelColor "\"\""
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.transportRouteVisualizer zIndex 4
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer typename "\"inet.visualizer.canvas.transportlayer.TransportConnectionCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer networkNodeVisualizerModule "\"^.networkNodeVisualizer\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer displayTransportConnections false
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer sourceNodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer sourcePortFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer destinationNodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer destinationPortFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer icon "\"misc/marker_s\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer iconColor "\"dark\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer labelFont "\"<default>\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer labelColor "\"black\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer placementHint "\"top\""
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer placementPriority 0
+par GarbageCollectionSystem.visualizer.transportConnectionVisualizer zIndex 4
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer typename "\"inet.visualizer.canvas.configurator.FailureProtectionConfigurationCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer displayTrees false
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineSmooth false
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer failureProtectionConfiguratorModule "\"failureProtectionConfigurator\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer streamFilter "\"*\""
+par GarbageCollectionSystem.visualizer.failureProtectionConfigurationVisualizer zIndex 3
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer typename "\"inet.visualizer.canvas.configurator.StreamRedundancyConfigurationCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer displayTrees false
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineColor "\"dark\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineSmooth false
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer streamRedundancyConfiguratorModule "\"streamRedundancyConfigurator\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer streamFilter "\"*\""
+par GarbageCollectionSystem.visualizer.streamRedundancyConfigurationVisualizer zIndex 3
+par GarbageCollectionSystem.visualizer.channelVisualizer typename "\"inet.visualizer.canvas.physicallayer.ChannelCanvasVisualizer\""
+par GarbageCollectionSystem.visualizer.channelVisualizer displayStringTextFormat "\"\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.channelVisualizer visualizationTargetModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.channelVisualizer visualizationSubjectModule "\"^.^\""
+par GarbageCollectionSystem.visualizer.channelVisualizer tags "\"\""
+par GarbageCollectionSystem.visualizer.channelVisualizer displayChannelActivity false
+par GarbageCollectionSystem.visualizer.channelVisualizer nodeFilter "\"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.channelVisualizer packetFilter "(omnetpp::cValueHolder)holder: \"*\""
+attr mutable ""
+par GarbageCollectionSystem.visualizer.channelVisualizer lineColor "\"blue\""
+par GarbageCollectionSystem.visualizer.channelVisualizer lineStyle "\"solid\""
+par GarbageCollectionSystem.visualizer.channelVisualizer lineWidth 3
+par GarbageCollectionSystem.visualizer.channelVisualizer lineShift 16
+par GarbageCollectionSystem.visualizer.channelVisualizer lineShiftMode "\"normal\""
+par GarbageCollectionSystem.visualizer.channelVisualizer lineContactSpacing 3
+par GarbageCollectionSystem.visualizer.channelVisualizer lineContactMode "\"rectangular\""
+attr enum circular,rectangular
+par GarbageCollectionSystem.visualizer.channelVisualizer labelFormat "\"%n\""
+par GarbageCollectionSystem.visualizer.channelVisualizer labelFont "\"<default>, 8px\""
+par GarbageCollectionSystem.visualizer.channelVisualizer labelColor "\"blue\""
+par GarbageCollectionSystem.visualizer.channelVisualizer fadeOutMode "\"realTime\""
+attr enum realTime,animationTime,simulationTime
+par GarbageCollectionSystem.visualizer.channelVisualizer fadeOutTime 1s
+attr unit s
+par GarbageCollectionSystem.visualizer.channelVisualizer fadeOutAnimationSpeed 0
+par GarbageCollectionSystem.visualizer.channelVisualizer holdAnimationTime 0s
+attr unit s
+par GarbageCollectionSystem.visualizer.channelVisualizer zIndex 1
+par GarbageCollectionSystem.visualizer typename "\"inet.visualizer.canvas.integrated.IntegratedCanvasVisualizer\""
+par GarbageCollectionSystem.infoDisplay typename "\"in5700groupprojectclean.InfoDisplay\""
+par GarbageCollectionSystem.infoDisplay mode "\"cloud\""
+par GarbageCollectionSystem.infoDisplay fastDelay 0.035s
+attr unit s
+par GarbageCollectionSystem.infoDisplay slowDelay 0.3s
+attr unit s
+par GarbageCollectionSystem typename "\"in5700groupprojectclean.GarbageCollectionSystem\""
+par GarbageCollectionSystem mode "\"cloud\""
+par GarbageCollectionSystem gsize 3
+par GarbageCollectionSystem fastDelay 0.035s
+attr unit s
+par GarbageCollectionSystem slowDelay 0.3s
+attr unit s
+par GarbageCollectionSystem fastRate 1.5e+08bps
+attr unit bps
+par GarbageCollectionSystem slowRate 5e+06bps
+attr unit bps
+
